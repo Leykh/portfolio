@@ -63,4 +63,10 @@ function move(currentDiv){
     else if (currentDiv.className === rightCard){
         moveLeft();
     }
+    else if (currentDiv.className === backCard){
+        moveLeft();
+        setTimeout(function() { /* on ajoute du delay sinon on voit pas le tourniqué*/
+            moveLeft();
+          }, 600);
+    }
 }
