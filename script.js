@@ -17,6 +17,13 @@ function moveRight() {
     });
 }
 
+function moveBack() {
+    cards = document.getElementsByClassName("card");
+    Array.from(cards).forEach((card) => {
+        card.className = getBack(card.className);
+    });
+}
+
 function getNextLeft(currentName){
     switch (currentName){
         case firstCard:
@@ -44,6 +51,20 @@ function getNextRight(currentName){
             return null;
     }
 }
+function getBack(currentName){
+    switch (currentName){ /* Va falloir m'expliquer pourquoi mettre un default si ça fait tout péter */
+        case backCard:
+            return firstCard;
+        case firstCard:
+            return backCard;
+        case rightCard:
+            return rightCard;
+        case leftCard:
+            return leftCard;
+        default:
+            return null;
+    }
+}
 function onClickDiv(currentDiv){
     expand(currentDiv);
     move(currentDiv);
@@ -64,9 +85,6 @@ function move(currentDiv){
         moveLeft();
     }
     else if (currentDiv.className === backCard){
-        moveLeft();
-        setTimeout(function() { /* on ajoute du delay sinon on voit pas le tourniqué*/
-            moveLeft();
-          }, 600);
+        moveBack();
     }
 }
