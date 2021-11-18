@@ -3,6 +3,11 @@ body {
   height: 100%;
 }
 
+@font-face {
+  font-family: "RobotoSlab-Regular";
+  src:url(./RobotoSlab-Regular.ttf) format("truetype");
+}
+
 body {
   display: flex;
   justify-content: space-around;
@@ -10,6 +15,7 @@ body {
   align-content: stretch;
   align-items: center;
   margin: 0;
+  font-family: "RobotoSlab-Regular";
 }
 
 .card-container {
@@ -26,7 +32,7 @@ body {
   border-radius: 2%;
   box-shadow: 5px 5px 5px #888888;
   border:1px solid #bdbdbd;
-  height: 60%;
+  height: 80%;
   width: 40%;
   margin: 5px;
   cursor:pointer;
@@ -39,42 +45,42 @@ body {
 
 .first-card {
   z-index: 2;
-  top: 35%;
+  top: 15%;
   left: 30%;
   right: 0; /* Spécifier l'origine de la transition*/
 }
 
 .first-card:hover {
-  top: 30%;
+  top: 10%;
 }
 
 .left-card {
   z-index: 1;
   right: 50%;
   left: 9%;
-  top: 25%;
+  top: 9.5%;
 }
 
 .left-card:hover, .right-card:hover {
-  top: 20%;
+  top: 5%;
 }
 
 .right-card {
   z-index: 1;
   left: 50%;
   right: 0;
-  top: 25%;
+  top: 9.5%;
 }
 
 .back-card {
   z-index: 0;
-  top: 10%;
+  top: 4%;
   left: 30%;
   right: 25%;
 }
 
 .back-card:hover {
-  top: 5%;
+  top: 0%;
 }
 
 .selected {

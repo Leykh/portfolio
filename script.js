@@ -1,7 +1,8 @@
-const leftCard = "card left-card";
-const rightCard = "card right-card";
-const firstCard = "card first-card";
-const backCard = "card back-card";
+const firstCard = {name:"card first-card"};
+const rightCard = {name:"card right-card"};
+const leftCard = {name:"card left-card"};
+const backCard = {name:"card back-card"};
+isExpanding = false;
 
 function moveLeft() {
     cards = document.getElementsByClassName("card");
@@ -26,27 +27,27 @@ function moveBack() {
 
 function getNextLeft(currentName){
     switch (currentName){
-        case firstCard:
-            return leftCard;
-        case leftCard:
-            return backCard;
-        case rightCard:
-            return firstCard;
-        case backCard:
-            return rightCard;
+        case firstCard.name:
+            return leftCard.name;
+        case leftCard.name:
+            return backCard.name;
+        case rightCard.name:
+            return firstCard.name;
+        case backCard.name:
+            return rightCard.name;
     }
 }
 
 function getNextRight(currentName){
     switch (currentName){
-        case firstCard:
-            return rightCard;
-        case rightCard:
-            return backCard;
-        case backCard:
-            return leftCard;
-        case leftCard:
-            return firstCard;
+        case firstCard.name:
+            return rightCard.name;
+        case rightCard.name:
+            return backCard.name;
+        case backCard.name:
+            return leftCard.name;
+        case leftCard.name:
+            return firstCard.name;
         default:
             return null;
     }
@@ -54,13 +55,13 @@ function getNextRight(currentName){
 function getBack(currentName){
     switch (currentName){ /* Va falloir m'expliquer pourquoi mettre un default si ça fait tout péter */
         case backCard:
-            return firstCard;
-        case firstCard:
-            return backCard;
-        case rightCard:
-            return rightCard;
-        case leftCard:
-            return leftCard;
+            return firstCard.name;
+        case firstCard.name:
+            return backCard.name;
+        case rightCard.name:
+            return rightCard.name;
+        case leftCard.name:
+            return leftCard.name;
         default:
             return null;
     }
@@ -70,21 +71,25 @@ function onClickDiv(currentDiv){
     move(currentDiv);
 }
 function expand(currentDiv){
-    if (currentDiv.className === firstCard + " selected"){
-        currentDiv.className = firstCard;
-    }
-    else if (currentDiv.className === firstCard){
+    if (currentDiv.className === firstCard.name && !isExpanding){
         currentDiv.className = currentDiv.className + " selected";
+    }
+    isExpanding = false;
+}
+function unexpand(currentDiv){
+    if (currentDiv.parentNode.className === firstCard.name + " selected"){
+        isExpanding = true;
+        currentDiv.parentNode.className = firstCard.name;
     }
 }
 function move(currentDiv){
-    if (currentDiv.className === leftCard){
+    if (currentDiv.className === leftCard.name){
         moveRight();
     }
-    else if (currentDiv.className === rightCard){
+    else if (currentDiv.className === rightCard.name){
         moveLeft();
     }
-    else if (currentDiv.className === backCard){
+    else if (currentDiv.className === backCard.name){
         moveBack();
     }
 }
