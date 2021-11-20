@@ -5,50 +5,61 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+  
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <div id="particles-js"></div>
     <div class="card-container">
         <div onclick="onClickDiv(this)" class="card first-card">
-            <h1 onclick="unexpand(this)">Diplôme et formation</h1>
-            <ul>
-                <li>
-                    <span class="year">2012</span> Baccalaureat
-                </li>
-                <li>
-                    <span class="year">2021</span> BTS SIO slam
-                </li>
-            </ul>
-            <div class="content"> </div>
+            <h1 onclick="onClickH1(this)">Contact</h1>
         </div>
         <div onclick="onClickDiv(this)" class="card left-card">
-            <h1>Projets réalisés</h1>
+            <h1 onclick="onClickH1(this)">Projets réalisés</h1>
             <ul>
-                <li>
-                    <span class="year">2018</span> Mise en place et nettoyage de données de plusieurs ERP vers un CRM
+                <li class="accordion">
+                    <span class="year">2018</span><div class="li-title"> Projet CRM</div> 
                 </li>
-                <li>
-                    <span class="year">2020</span> Mise en place d'un process et d'un user guideline pour le traitement des échantillons d'un backoffice
+                <div class = "description">Mise en place et nettoyage de données de plusieurs ERP vers un CRM</div>
+                <li class="accordion">
+                    <span class="year">2020</span> <div class="li-title"> Projet Sample BO</div> 
                 </li>
-                <li>
-                    <span class="year">2020 - &nbsp &#160</span> Mise en place d'un process de data cleaning d'une BI
+                <div class = "description">Mise en place d'un process et d'un user guideline pour le traitement des échantillons d'un backoffice</div>
+                <li class="accordion">
+                    <span class="year">2020 - &nbsp &#160</span> <div class="li-title"> Projet BI QV</div> 
                 </li>
+                <div class = "description">Mise en place d'un process de data cleaning d'une BI</div>
             </ul>
         </div>
         <div onclick="onClickDiv(this)" class="card back-card">
-            <h1>Contact</h1>
+            <h1 onclick="onClickH1(this)">Diplôme et formation</h1>
+            <ul>
+                <li class="accordion">
+                    <span class="year">2012</span> <div class="li-title"> Baccalaureat</div> 
+                </li>
+                <div class = "description">Baccalaureat générale économie et sociale, à l'école Marcelin Berthelot, Toulouse</div>
+                <li class="accordion">
+                    <span class="year">2021</span> <div class="li-title"> BTS SIO</div> 
+                </li>
+                <div class = "description">BTS Services informatiques aux organisations, option solutions logicielles et applications métiers (SLAM), CCI Marseille</div>
+            </ul>
+            <div class="content"> </div>
         </div>
         <div onclick="onClickDiv(this)" class="card right-card">
-            <h1>Parcours professionnel</h1>
+            <h1 onclick="onClickH1(this)">Parcours professionnel</h1>
             <ul>
-                <li>
+                <li class="accordion">
                     <span class="year">2017 - 2018</span> Data quality assistant
                 </li>
-                <li>
-                    <span class="year">2018 - 2020</span> Customer Service Backoffice Data Analyst
+                <div class = "description">1 an chez Imerys, PMEMEA / Filtration</div>
+                <li class="accordion">
+                    <span class="year">2018 - 2020</span> CS Backoffice Assistant
                 </li>
-                <li>
+                <div class = "description">2 ans chez Imerys, PMEMEA / Filtration traitement des échantillons aux backoffice du customer service</div>
+                <li class="accordion">
                     <span class="year">2020 - &nbsp &#160</span> Data/BI Analyst
                 </li>
+                <div class = "description">De 2020 à maintenant chez Imerys, RAC, traitement de la donnée dans la BI Qlikview de la division RAC</div>
             </ul>
         </div>
     </div>
