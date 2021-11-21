@@ -51,7 +51,7 @@ body {
 }
 
 .first-card:hover {
-  top: 10%;
+  top: 13%;
 }
 
 .left-card {
@@ -63,7 +63,7 @@ body {
 
 .left-card:hover,
 .right-card:hover {
-  top: 5%;
+  top: 7%;
 }
 
 .right-card {
@@ -81,7 +81,7 @@ body {
 }
 
 .back-card:hover {
-  top: 0%;
+  top: 2%;
 }
 
 .selected {
@@ -156,6 +156,50 @@ body {
   color: #2c3a41;
   background-color: #e6e6e6;
   left: 0.1em;
+}
+
+.card li.image{
+  
+  display: flex;
+  align-items: center;
+}
+
+.card li.image .fit-picture{
+  width: 2.4em;
+  padding-left: 0.8em;
+}
+
+.card .profil-wrap{
+  padding-top: 3em;
+  display: flex;
+  align-items: center;
+}
+
+.card .profil-wrap a{
+  margin: auto;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.profil{
+  width: 13em;
+  height: 11em;
+  margin: auto;
+  margin-top: 3px;
+  padding: 0 3px;
+  border-radius: 50%;
+  transition: all 1s ease-out;
+}
+
+.profil:hover{
+  opacity:0.7;
+}
+
+.card a {
+  text-align: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 1.4em;
 }
 
 canvas {
