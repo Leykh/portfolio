@@ -5,7 +5,7 @@ body {
 
 @font-face {
   font-family: "RobotoSlab-Regular";
-  src: url(./RobotoSlab-Regular.ttf) format("truetype");
+  src: url(./assets/police/RobotoSlab-Regular.ttf) format("truetype");
 }
 
 body {
@@ -38,6 +38,7 @@ body {
   cursor: pointer;
   position: absolute; /* force à toutes les mettres au même endroit */
   transition: all 1s ease-out; /* plus ou moins, les temps des transitions (. pour les décimales) */
+  overflow:hidden;
 }
 .card:hover {
   box-shadow: 20px 20px 20px #888888;
