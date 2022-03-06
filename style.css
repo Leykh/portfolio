@@ -92,6 +92,7 @@ body {
   left: 0%;
   bottom: 0%;
   right: 0; /* Spécifier l'origine de la transition*/
+  overflow-y:scroll
 }
 
 .selected:hover {
@@ -100,6 +101,7 @@ body {
 
 .card ul {
   list-style-type: none; /* enlève les puces */
+  padding-block-end: 20px;
 }
 
 .card li {
@@ -247,4 +249,19 @@ canvas {
 }
 .count-particles {
   border-radius: 0 0 3px 3px;
+}
+
+.imageschema {
+  width: 25%;
+  height: auto;
+}
+.imageschema:hover {
+  fill:#13e8e9;
+}
+.card-container .notvisible {
+  display:none;
+}
+.selected .notvisible {
+  display:inherit;
+  margin-left:25%;
 }
