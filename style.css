@@ -210,6 +210,12 @@ body {
   text-decoration: none;
   margin-left: 1.4em;
 }
+.card .description a {
+  text-align: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 0;
+}
 
 canvas {
   display: block;
@@ -262,6 +268,8 @@ canvas {
   height: auto;
   margin-left:25%;
 }
+
+
 .text-invisible{
   font-size: large;
   width: 92%;
@@ -269,8 +277,13 @@ canvas {
   justify-content: center;
   padding-top: 10px;
 }
-.imageschema:hover {
-  fill:#13e8e9;
+.text-invisible-list{
+  font-size: large;
+  width: 80%;
+  align-self: center;
+  justify-content: center;
+  padding-top: 10px;
+  margin-left:10%;
 }
 .card-container .notvisible {
   display:none;
