@@ -68,7 +68,9 @@ function getBack(currentName) {
   }
 }
 function onClickDiv(currentDiv) {
-  onClickH1(currentDiv.firstChild);
+  if (currentDiv.onclick.arguments[0].target.className.split(" ")[0] === "card") {
+    onClickH1(currentDiv.firstChild);
+  }
   move(currentDiv);
 }
 function onClickH1(currentDiv){
