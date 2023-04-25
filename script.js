@@ -68,6 +68,7 @@ function getBack(currentName) {
   }
 }
 function onClickDiv(currentDiv) {
+  onClickH1(currentDiv.firstChild);
   move(currentDiv);
 }
 function onClickH1(currentDiv){
