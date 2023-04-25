@@ -49,7 +49,14 @@ body {
   top: 15%;
   left: 30%;
   right: 0; /* Spécifier l'origine de la transition*/
+
+  overflow-y:scroll;
 }
+
+.card::-webkit-scrollbar {
+  display: none;
+}
+
 
 .first-card:hover {
   top: 13%;
