@@ -48,7 +48,7 @@ body {
   z-index: 2;
   top: 15%;
   left: 30%;
-  right: 0; /* Spécifier l'origine de la transition*/
+  right: 0; /* Spécifier l'origine de la transition*/ 
 
   overflow-y:scroll;
 }
@@ -303,4 +303,23 @@ canvas {
 }
 .selected .notvisible {
   display:inherit;
+}
+
+.card-container .enlargeLogo{
+  position:inherit;
+  left:90%;
+  opacity:20%; 
+  width:8%;
+  padding: 3px 3px 3px 3px;
+}
+
+
+.card-container .enlargeLogo:hover{
+  position:inherit;
+  left:90%;
+  opacity:80%; 
+  width:8%;
+  padding: 3px 3px 3px 3px;
+  transition: all 1s ease-out; 
+  overflow:hidden;
 }
