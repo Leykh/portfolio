@@ -338,3 +338,30 @@ canvas {
   transition: all 1s ease-out; 
   overflow:hidden;
 }
+
+.bulle {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bulle:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-bottom-color: blue;
+}
+
+.bulle img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
